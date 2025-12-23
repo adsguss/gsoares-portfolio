@@ -1,0 +1,383 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  color: #00d8a2;
+}
+
+/* ==========================
+   ESPAÇO ANTES DO RODAPÉ
+========================== */
+
+.contact-section {
+  margin-bottom: 60px;   /* controla a distância do rodapé */
+}
+
+
+/* ==========================
+   HERO (VERSÃO COMPACTA)
+========================== */
+
+.hero {
+  min-height: 45vh;          /* ↓ era 100vh */
+  padding: 40px 20px;        /* ↓ reduz espaço vertical */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: radial-gradient(circle at top, #0f172a, #020617);
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 900px;
+}
+
+/* ==========================
+   FOTO DE PERFIL
+========================== */
+
+.profile-photo-wrapper {
+  margin-bottom: 16px;       /* ↓ aproxima da headline */
+}
+
+.profile-photo {
+  width: 140px;              /* ↓ um pouco menor */
+  height: 140px;
+  border-radius: 50%;
+}
+
+/* ==========================
+   TEXTO DO HERO
+========================== */
+
+.hero-content h1 {
+  margin-bottom: 10px;
+  font-size: 2.4rem;
+}
+
+.subtitle {
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* ==========================
+   BOTÕES
+========================== */
+
+.hero-buttons {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 6px;
+  background-color: transparent;
+  border: 2px solid #00d8a2;
+  color: #00d8a2;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+.btn.active {
+  background-color: #00d8a2;
+  color: #0f172a;
+}
+
+.section-card {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 216, 162, 0.15);
+}
+
+.projects-section {
+  padding: 80px 20px;
+}
+
+.filter-tabs button {
+  background: transparent;
+  border: 2px solid #00d8a2;
+  color: #00d8a2;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-tabs button.active,
+.filter-tabs button:hover {
+  background-color: #00d8a2;
+  color: #0f172a;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 216, 162, 0.15);
+}
+
+.tags span {
+  background: #00d8a2;
+  color: #0f172a;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+
+.projects-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 60px auto 0;
+  overflow: hidden;
+}
+
+.projects-track {
+  display: flex;
+  gap: 40px;
+  transition: transform 0.5s ease;
+}
+
+----
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #00d8a2;
+  border: none;
+  color: #0f172a;
+  font-size: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.nav-btn.prev { left: -20px; }
+.nav-btn.next { right: -20px; }
+
+.project-card {
+  min-width: calc(50% - 20px);
+  background: #1e293b;
+  padding: 36px;
+  border-radius: 18px;
+
+  display: none;
+  flex-direction: column;
+
+  /* Layout correto */
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+
+  /* Evita corte de conteúdo */
+  height: auto;
+  box-sizing: border-box;
+  text-align: center;
+
+  /* Animação */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 216, 162, 0.15);
+}
+
+.project-card h3 {
+  margin: 0;
+}
+
+.project-card p {
+  max-width: 100%;
+  white-space: normal;     /* permite quebrar linha */
+  word-break: break-word;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.project-card .tags {
+  display: flex;
+  flex-wrap: wrap;         /* quebra linha das tags */
+  gap: 8px;
+  justify-content: center;
+}
+
+
+
+
+
+
+/* ==========================
+   HERO CAROUSEL
+========================== */
+
+.hero-carousel {
+  margin-top: -120px;
+  padding: 24px 0 48px;
+}
+
+.carousel-track {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 16px;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  padding: 12px 16px;
+}
+
+/* esconder scrollbar */
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track img {
+  flex: 0 0 calc((100% - 32px) / 3); /* 🔑 3 imagens visíveis */
+  height: 150px;
+
+  object-fit: cover;
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  opacity: 0.45;                    /* 🔑 transparência padrão */
+  transition: 
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  scroll-snap-align: center;
+}
+
+/* hover */
+.carousel-track img:hover {
+  opacity: 1;
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0, 216, 162, 0.3);
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .hero-carousel {
+    margin-top: -80px;
+  }
+
+  .carousel-track img {
+    flex: 0 0 80%;
+    height: 130px;
+  }
+}
+
+
+
+/* ==========================
+   FOTO DE PERFIL INTERATIVA
+========================== */
+
+.profile-photo-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 24px 0;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  border: 4px solid #00d8a2;
+
+  transition: 
+    transform 0.4s ease,
+    border-radius 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* efeito hover */
+.profile-photo-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,216,162,0.35), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.profile-photo-wrapper:hover::before {
+  opacity: 1;
+}
+
+.profile-photo-wrapper:hover .profile-photo {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 216, 162, 0.6);
+}
+
+/* ==========================
+   MODO EXPANDIDO
+========================== */
+
+.profile-photo.expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 16px;
+  z-index: 9999;
+
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7);
+}
+
+/* fundo escuro */
+.profile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.9);
+  z-index: 9998;
+}
+
+
